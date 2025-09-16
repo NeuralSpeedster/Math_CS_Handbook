@@ -1,0 +1,9 @@
+= Комбинаторика
+
+В этом разделе рассматриваются основные понятия и тождества комбинаторики, а так же основы теории множеств и теории графов.
+
+#include "../combinatorics/sum_product.typ"
+
+#pagebreak()
+
+#include "../combinatorics/perm_comb.typ"
