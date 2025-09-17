@@ -14,8 +14,16 @@ jobs:
     - name: Compile main document
       run: typst compile main.typ main.pdf
 
+    - name: Create deployment directory and copy PDF
+      run: |
+        mkdir -p deploy  # ← Создаем папку прямо в workflow
+        cp main.pdf deploy/  # ← Копируем PDF в папку
 
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v4
       with:
-        path: main.pdf
+        path: deploy/
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
