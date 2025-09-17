@@ -20,16 +20,11 @@ jobs:
     - name: Compile main document
       run: typst compile main.typ main.pdf
 
-    - name: Create deployment directory and copy PDF
-      run: |
-        mkdir -p deploy
-        cp main.pdf deploy/
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v4
-      with:
-        path: deploy/
-
     - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v2
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+        keep_files: false
+        allow_empty_commit: true
+        force_orphan: true
