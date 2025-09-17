@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Compile Typst Files
-      uses: NeuralSpeedster/Math_CS_Handbook@v1
+      uses: NeuralSpeedster/Math_CS_Handbook@main
       with:
         source_paths: 'main.typ'
         output_paths: 'main.pdf'
