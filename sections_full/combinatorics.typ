@@ -1,0 +1,23 @@
+#set page(footer: context 
+[
+  #line(length: 100%)
+  _Комбинаторика_
+#h(1fr)
+#counter(page).display("1")
+]
+)
+
+= Комбинаторика
+
+В этом разделе рассматриваются основные понятия и тождества комбинаторики, а так же основы теории множеств и теории графов.
+
+#include "../combinatorics/sum_product.typ"
+
+#pagebreak()
+
+#include "../combinatorics/sets.typ"
+
+#pagebreak()
+
+#include "../combinatorics/perm_comb.typ"
+
