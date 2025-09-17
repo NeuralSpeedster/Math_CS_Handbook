@@ -1,19 +1,10 @@
 name: Compile Typst Documents
 on: [push]
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-
     - name: Compile Typst Files
       uses: typst-community/setup-typst@v2
       with:
@@ -22,12 +13,3 @@ jobs:
 
     - name: Compile main document
       run: typst compile main.typ main.pdf
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
-        keep_files: false
-        allow_empty_commit: true
-        force_orphan: true
