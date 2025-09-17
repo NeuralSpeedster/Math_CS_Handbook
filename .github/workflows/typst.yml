@@ -1,13 +1,12 @@
-name: Build Typst document
-on: push
-
+name: Compile Typst Documents
+on: [push]
 jobs:
-  build_typst_documents:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Typst
-        uses: NeuralSpeedster/Math_CS_Handbook@main
-        with:
-          source_file: main.typ
+    - uses: actions/checkout@v4
+    - name: Compile Typst Files
+      uses: NeuralSpeedster/Math_CS_Handbook@v1
+      with:
+        source_paths: 'main.typ'
+        output_paths: 'main.pdf'
