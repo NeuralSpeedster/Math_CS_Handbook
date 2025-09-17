@@ -1,5 +1,11 @@
 name: Compile Typst Documents
 on: [push]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,8 +22,8 @@ jobs:
 
     - name: Create deployment directory and copy PDF
       run: |
-        mkdir -p deploy  # ← Создаем папку прямо в workflow
-        cp main.pdf deploy/  # ← Копируем PDF в папку
+        mkdir -p deploy
+        cp main.pdf deploy/
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v4
