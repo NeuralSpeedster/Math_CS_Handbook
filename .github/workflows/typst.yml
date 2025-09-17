@@ -2,7 +2,7 @@ name: Compile Typst Documents
 on: [push]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Compile Typst Files
       uses: typst-community/setup-typst@v2
       with:
