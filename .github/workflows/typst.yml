@@ -1,15 +1,39 @@
-name: Compile Typst Documents
+name: Build Typst document
 on: [push]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Compile Typst Files
-      uses: typst-community/setup-typst@v2
-      with:
-        version: latest
-        cache: true
-
-    - name: Compile main document
-      run: typst compile main.typ main.pdf
+      - uses: actions/checkout@v4
+      - uses: fontist/setup-fontist@v2
+      - run: fontist install "Fira Code"
+      - run: fontist install "Iosevka"
+      - uses: typst-community/setup-typst@v3
+      - run: typst compile main.typ main.pdf
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .   
+    
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
