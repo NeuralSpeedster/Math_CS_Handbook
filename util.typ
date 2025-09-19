@@ -21,3 +21,5 @@
   rect($triangle.r.filled space $ + lang, stroke: rgb(0, 0, 0, 50%), fill: bg),
   rect(content, fill: bg, stroke: rgb(0, 0, 0, 50%), width: 100%))
 }
+
+#let empty = $cancel(circle, length: #95%)$

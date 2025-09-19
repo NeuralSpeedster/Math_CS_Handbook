@@ -2,7 +2,7 @@
 
 #set text(12pt, lang: "ru", )
 #set math.equation(numbering: "(1)", supplement: none)
-#set heading(numbering: "1.",)
+#set heading(numbering: "A.1.",)
 #set par(
   leading: 1em,
   first-line-indent: (amount: 1.25em, all: true),
@@ -10,6 +10,7 @@
 )
 
 #set enum(full: true, numbering: "1.1.", indent: 1.25em)
+#set list(indent: 1.25em)
 #align(horizon, align(center, stack(spacing: 1.5em, 
 text(size: 24pt, weight: "bold", "ШАД. Хэндбук поступающего"),
 text(size: 18pt, "Автор: Даниил Скороходов "),
@@ -47,6 +48,5 @@ text(size: 14pt, datetime.today().display("[day].[month].[year]"))
 #pagebreak()
 
 #include "sections_full/DS.typ"
-
 
 
