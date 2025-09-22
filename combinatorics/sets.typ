@@ -81,17 +81,20 @@ $ A times B = {(a, b) | a in A, space b in B} $
 
 *Утверждение 1.* $A inter B = empty => abs(A union B) = abs(A) + abs(B)$ 
 
-(#ref(<sets_union_card>, supplement: text("Уже доказано, см.",)))
+(#ref(<sets_union_card>, supplement: text("Уже доказано, см.", fill: blue)))
 
 *Утверждение 2.* $abs(A times B) = abs(A) dot abs(B)$ 
 
-(#ref(<sets_product>, supplement: text("Уже доказано, см.",)))
+(#ref(<sets_product>, supplement: text("Уже доказано, см.",fill: blue)))
 
 === Круги Эйлера
+
+Отношения между множествами можно визуально представить с помощью кругов Эйлера.
 
 
 === Формула включений и исключений
 
+Пусть $A_1, A_2, ..., A_n$ - конечные множества. Тогда
 
-
+$ abs(union.big_(i=1)^n A_i) = sum_(i) abs(A_i) - sum_(i < j) abs(A_i inter A_j)+ \ + ... + (-1)^(n-1) abs(A_1 inter A_2 inter ... inter A_n ) $
 
