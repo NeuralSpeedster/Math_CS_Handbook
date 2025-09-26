@@ -7,3 +7,6 @@
 ]
 )
 = Математический анализ
+
+#include "../calculus/multiple_integrals.typ"
+
