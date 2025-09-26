@@ -1,3 +1,4 @@
+#import "../util.typ": *
 == Кратные интегралы
 
 === Двойные интегралы
@@ -51,20 +52,41 @@ $ m_i = inf_(sigma_i) f(x, y) $
 Для любого разбиения справедливо, что 
 $ s <= S_n <= S $
 
-*Свойства сумм Дарбу:*
+Свойства сумм Дарбу:
 
 + При добавлении новых фигур $sigma_i$ и линий в разбиение $D$ нижняя сумма   Дарбу
   не убывает, а верхняя --- не возрастает.
 + Любая нижняя сумма Дарбу не превосходит любой верхней суммы Дарбу, даже 
   для разных разбиений.
 
+_Определение._ Колебанием функции $f(x, y)$ на области $D$ называется число $ S - s = sum_(i=1)^n (M_i - m_i) dot abs(sigma_i) $
+
+*Критерий интегрируемости Римана.* Для того, чтобы ограниченная функция
+$f$ была интегрируема по области $D$ _необходимо и достаточно_, чтобы
+
+$ lim_(lambda -> 0) S - s = 0 $
 
 ==== Свойства двойного интеграла
 
+Пусть функции $f(x, y)$ и $g(x, y)$ интегрируемы в $D$.
+
++ Линейность. $forall alpha, beta in RR:$
+  $ op(integral.double, limits: #true)_D (alpha f(x, y) + beta g(x, y)) d sigma = alpha op(integral.double, limits: #true)_D f(x, y) d sigma + beta op(integral.double, limits: #true)_D g(x, y) d sigma $
+
++ Аддитивнось по области. $forall D_1, D_2: (D_1 union D_2 = D) and (ints(D_1) inter ints(D_2) = empty):$
+  $ op(integral.double, limits: #true)_D f(x, y) d sigma = 
+  op(integral.double, limits: #true)_D_1 f(x, y) d sigma + op(integral.double, limits: #true)_D_2 f(x, y) d sigma
+  $
+
++ Интегрирование неравенств.
+
+  + Следствие.
+
+  + Следствие.
+
++ Теорема о среднем. 
 
 
++ Интеграл от единицы. 
 
-
-
-
-
+  $ op(integral.double, limits: #true)_D  d x d y = abs(D) $
