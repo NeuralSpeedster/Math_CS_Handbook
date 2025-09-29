@@ -78,14 +78,25 @@ $ lim_(lambda -> 0) S - s = 0 $
   op(integral.double, limits: #true)_D_1 f(x, y) d sigma + op(integral.double, limits: #true)_D_2 f(x, y) d sigma
   $
 
-+ Интегрирование неравенств.
++ Интегрирование неравенств. Если
+  $f(x, y) <= g(x, y)$, то 
+  $ op(integral.double, limits: #true)_D f(x, y) d sigma <= op(integral.double, limits: #true)_D g(x, y) d sigma $
 
-  + Следствие.
 
-  + Следствие.
+  + Следствие. Если $m <= f(x, y) <= M $, то 
+  $ m dot abs(D) <= op(integral.double, limits: #true)_D f(x, y) d sigma <= M dot abs(D) $
 
-+ Теорема о среднем. 
+  + Следствие. 
+  $ abs(op(integral.double, limits: #true)_D f(x, y) d sigma) <= op(integral.double, limits: #true)_D abs(f(x, y)) d sigma $
 
+
++ Теорема о среднем. Если функция $f(x, y)$ непрерывна в замкнутой связной области $D$, то $exists (xi, eta) in D:$
+
+  $ f(xi, eta) =1/(abs(D)) op(integral.double, limits: #true)_D f(x, y) d sigma $
+
+  _Доказательство._ По теореме Вейерштрасса, на связной замнкутой области $D$ функция $f$ ограничена, поэтому $exists m, M in RR: space forall (x, y) in D: space m <= f(x, y) <= M$. Используя следствие (3.1), можно написать, что 
+  $ m <= 1/(abs(D)) op(integral.double, limits: #true)_D f(x, y) d sigma <= M $
+  По теореме Больцано-Коши (о промежуточном значении), непрерывная функция $f$ принимает на $D$ все значения между $m$ и $M$, в частности $exists (xi, eta) in D$, для которой выполнено требуемое. $square.filled$
 
 + Интеграл от единицы. 
 
