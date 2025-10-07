@@ -15,3 +15,6 @@
 
 #include "../algorithms/complexity.typ"
 
+#pagebreak()
+
+#include "../algorithms/dynamic_programming.typ"
