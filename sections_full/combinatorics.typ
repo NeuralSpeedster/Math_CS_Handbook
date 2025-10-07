@@ -21,3 +21,7 @@
 
 #include "../combinatorics/perm_comb.typ"
 
+#pagebreak()
+
+#include "../combinatorics/generating_functions.typ"
+
