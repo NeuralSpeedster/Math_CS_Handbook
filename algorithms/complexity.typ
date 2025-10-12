@@ -22,3 +22,30 @@
 + Функция $f(n)$ принадлежит омега-малому от функции $g(n)$, если предел отношения $g$ и $f$ равен нулю при неограниченном возрастании $n$.
 
     $ f(n) = omega(g(n)) <=> lim_(n->oo) g(n) / f(n) = 0 $
+
+=== Свойства сравнений функций
+
++ Транзитивность.
+    - $#[из] f(n) = Theta(g(n)) space #[и] space g(n) = Theta(h(n)) #[следует] f(n) = Theta(h(n))$
+
+    - $#[из] f(n) = O(g(n)) space #[и] space g(n) = O(h(n)) #[следует] f(n) = O(h(n))$
+
+    - $#[из] f(n) = Omega(g(n)) space #[и] space g(n) = Omega(h(n)) #[следует] f(n) = Omega(h(n))$
+
+    - $#[из] f(n) = o(g(n)) space #[и] space g(n) = o(h(n)) #[следует] f(n) = o(h(n))$
+    
+    - $#[из] f(n) = omega(g(n)) space #[и] space g(n) = omega(h(n)) #[следует] f(n) = omega(h(n))$
+    
+
+
++ Рефлексивность.
+    - $f(n) = Theta(f(n))$
+    - $f(n) = O(f(n))$
+    - $f(n) = Omega(f(n))$
+
++ Симметричность.
+    - $f(n) = Theta(g(n)) => g(n) = Theta(f(n))$
+
++ Перестановочная симметрия.
+    - $f(n) = O(g(n)) <=> g(n) = Omega(f(n))$
+    - $f(n) = o(g(n)) <=> g(n) = omega(f(n))$
