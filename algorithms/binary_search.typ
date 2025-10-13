@@ -16,7 +16,7 @@ fun binary_search(array, x):
     else:
       r = mid - 1
 
-  return NIL
+  return -1
 ```
 
 Временная сложность данного алгоритма равна $O(log n)$.
