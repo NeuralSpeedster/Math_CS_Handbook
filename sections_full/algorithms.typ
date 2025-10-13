@@ -17,4 +17,8 @@
 
 #pagebreak()
 
+#include "../algorithms/binary_search.typ"
+
+#pagebreak()
+
 #include "../algorithms/dynamic_programming.typ"
