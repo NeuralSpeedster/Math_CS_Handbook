@@ -13,4 +13,11 @@
 $ F_xi := P(xi < x) $
 
 === Свойства функции распределения случайной величины
-$$
+Пусть $xi$ - случайная величина.
+
++ $0 <= F_xi (x) <= 1, space forall x in RR$,
++ $F_xi (-infinity) = F_xi (xi < -infinity) = 0$,
++  $F_xi (+infinity) = F_xi (xi < infinity) = 1$,
++ $F_xi arrow.tr $ (функция распределения монотонно не убывает на всей области определения).
+  $square$
+  $square.filled$
