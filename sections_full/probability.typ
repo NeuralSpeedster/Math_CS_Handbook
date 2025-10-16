@@ -11,3 +11,7 @@
 
 
 #include "../probability/base.typ"
+
+#pagebreak()
+
+#include "../probability/random_variables.typ"

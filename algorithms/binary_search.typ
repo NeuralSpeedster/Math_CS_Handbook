@@ -45,3 +45,5 @@ fun right_binary_search(l, r, check, checkparams):
       r = mid - 1
   return l
 ```
+
+На практике, лучше проверять реализацию бинпоиска на 2-х числах!
