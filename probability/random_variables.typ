@@ -19,5 +19,6 @@ $ F_xi := P(xi < x) $
 + $F_xi (-infinity) = F_xi (xi < -infinity) = 0$,
 +  $F_xi (+infinity) = F_xi (xi < infinity) = 1$,
 + $F_xi arrow.tr $ (функция распределения монотонно не убывает на всей области определения).
-  $square$
+
+  $square$ Пусть $x_1 < x_2$ и $x_1, x_2$ входят в область значений случайной величины $xi$. Тогда $F_xi (x_2) = P(xi < x_2) = P({xi < x_1} union {x_1 <= xi < x_2}) = P(xi < x_1) + P(x_1 <= xi < x_2) >= P(xi < x_1) = F_xi (x_1)$
   $square.filled$
