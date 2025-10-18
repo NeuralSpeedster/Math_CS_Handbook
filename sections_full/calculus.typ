@@ -10,3 +10,8 @@
 
 #include "../calculus/multiple_integrals.typ"
 
+#pagebreak()
+
+#include "../calculus/number_series.typ"
+
+
