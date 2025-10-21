@@ -25,3 +25,5 @@
 #let empty = $cancel(circle, length: #95%)$
 
 #let ints  = $op("int")$ 
+
+#let int = $op(integral, limits: #true)$
