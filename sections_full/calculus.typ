@@ -12,6 +12,10 @@
 
 #pagebreak()
 
+#include "../calculus/beta_gamma_functions.typ"
+
+#pagebreak()
+
 #include "../calculus/number_series.typ"
 
 
