@@ -49,6 +49,10 @@ $ Gamma(x) = int_0^oo t^(x-1) e^(-t) d t $
   $ Gamma(n + 1/2) = 1/2 dot 3/4 dot ... dot (2n - 1)/2 dot Gamma(1/2) = \ =
   (1 dot 3 dot ... dot (2n - 1))/(2^n) dot sqrt(pi) = (2n-1)!!/(2^n) sqrt(pi) = ((2n)!)/(4^n n!) sqrt(pi). space square.filled $
 
++ Свойство дополнения. $forall x in (0, 1)$:
+  $ Gamma(x) dot Gamma(1 - x) = pi/(sin(pi x)) $
+ 
+
 + Логарифмическая выпуклость гамма-функции.
   $forall x_1, ..., x_n > 0, forall alpha_1, ..., alpha_n in [0, 1], space sum alpha_i = 1$:
   $ Gamma(sum_(i=1)^n alpha_ i x_i) <= product_(i=1)^n [Gamma(x_i)]^(alpha_i) $
