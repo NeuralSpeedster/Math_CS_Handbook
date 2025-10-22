@@ -41,6 +41,17 @@ $ Gamma(x) = int_0^oo t^(x-1) e^(-t) d t $
   $ int_0^oo t^(x-1) e^(-t) d t = int_0^oo (u^2)^(x-1) e^(-u^2) dot 2u d u = int_0^oo 2u^(2x-1) e^(-u^2) d u $
   Поскольку $Gamma(x) = int_0^oo t^(x-1) e^(-t) d t$, то требуемое доказано. $square.filled$
 
++ Логарифмическая выпуклость гамма-функции.
+  $forall x, y > 0, forall lambda in [0, 1]:$
+  $ Gamma(lambda x + (1 - lambda) y) <= [Gamma(x)]^lambda dot [Gamma(y)]^(1 - lambda) $
+
+  _Доказательство._ $square$ 
+  $ ln(Gamma(x)) = ln(int_0^oo t^(x-1) e^(-t) d t) = ln(int_0^oo f(t; x) d t) $
+  $ (d ln(Gamma(x))) / (d x) = (Gamma_x '(x))/(Gamma(x)) $
+
+  $ (d^2 ln(Gamma(x))) / (d x^2) = (Gamma_x ''(x) dot Gamma(x) - [Gamma_x '(x)]^2)/(Gamma(x))^2 $
+
+  $square.filled$
 === Бета-функция
 
 _Определение._ Бета-функция $Beta(x, y)$ определяется для всех положительных вещественных чисел $x > 0$, $y > 0$ интегралом
