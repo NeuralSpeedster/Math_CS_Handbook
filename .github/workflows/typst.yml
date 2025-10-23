@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: fontist/setup-fontist@v2
       - run: fontist install "Fira Code"
       - run: fontist install "Iosevka"
       - uses: typst-community/setup-typst@v3
