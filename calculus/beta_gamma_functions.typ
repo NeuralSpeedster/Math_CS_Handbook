@@ -157,7 +157,7 @@ $ Beta(1/2, 1/2) = (Gamma(1/2) Gamma(1/2))/(Gamma(1/2 + 1/2)) $
 $ [Gamma(1/2)]^2 = pi $
 
 Следовательно, $Gamma(1/2) = sqrt(pi)$. Но с другой стороны, 
-$ Gamma(1/2) = int_0^oo e^(-x^2) d x $
+$ Gamma(1/2) = 2 int_0^oo e^(-x^2) d x = int_(-oo)^oo e^(-x^2) d x $
 
 $square.filled$
 
