@@ -8,6 +8,10 @@
 )
 = Математический анализ
 
+#include "../calculus/sequences.typ"
+
+#pagebreak()
+
 #include "../calculus/multiple_integrals.typ"
 
 #pagebreak()
