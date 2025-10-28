@@ -154,5 +154,44 @@ _Теорема._ У любой последовательности ${a_n}$, с
    Поэтому $forall n > N_3: b_n in u_epsilon (a)$, а это и есть определение предела $lim b_n = a$. $square.filled$
 
 
-
 === Арифметические свойства пределов
+
+==== Бесконечно малые последовательности
+_Определение._ Последовательность $alpha_n$ называется бесконечно малой(БМ), если 
+
+$
+  lim_(n->oo) alpha_n = 0
+$
+
+Свойства бесконечно малых последовательностей:
+
++ Если $alpha_n$ и $beta_n$ - бесконечно малые последовательности, то $alpha_n + beta_n$ - бесконечно малая последовательность.
+  _Доказательство._ $square$ Пусть $lim alpha_n = 0$, $lim beta_n = 0$. Тогда по определению предела 
+  $
+  forall epsilon > 0 space exists N_1 in NN: forall n > N_1: abs(alpha_n) < epsilon
+  $ 
+  $
+  forall epsilon > 0 space exists N_2 in NN: forall n > N_2: abs(beta_n) < epsilon.
+  $ 
+  Обозначим $N = max{N_1, N_2}$. Тогда $forall n > N: abs(alpha_n + beta_n) <= abs(alpha_n) + abs(beta_n) < 2 epsilon$, что и означает, что $lim (alpha_n + beta_n) = 0$. $square.filled$
+
++ Если $alpha_n$ - бесконечно малая последовательность, а $a_n$ - ограничена, то $alpha_n dot a_n$ --- бесконечно малая последовательность.
+  _Доказательство._ $square$ Пусть $lim alpha_n = 0$, $a_n$ ограничена, то есть $exists M > 0: forall n in NN: abs(a_n) < M$. Тогда для последовательности $beta_n = alpha_n dot a_n$ имеем
+  $
+    abs(beta_n) = abs(alpha_n) dot abs(a_n) <_((n > N)) epsilon dot M.
+  $
+  Тогда $b_n$ - бесконечно малая последовательность. $square.filled$
+
+
+_Утверждение._ Если $alpha_n$ --- бесконечно малая последовательность, то
+$ lim_(n->oo) a_n = a <=> exists alpha_n = a_n - a $
+_Доказательство._ $square$ 
++ $=>$. По определению предела 
+  $ forall epsilon > 0 space exists N in NN: forall n > N: abs(a_n - a) < epsilon. $ 
+  Обозначим $alpha_n = a_n - a$. Тогда $forall n > N: abs(alpha_n) < epsilon$, следовательно, $lim alpha_n = 0$.
+
++ $arrow.double.l$. По определению бесконечно малой последовательности, 
+  $ forall epsilon > 0 exists N in NN: forall n > N: abs(alpha_n) < epsilon. $
+
+  Подставляя сюда $alpha_n = a_n - a$, получаем, что $a_n -> a$.
+$square.filled$
