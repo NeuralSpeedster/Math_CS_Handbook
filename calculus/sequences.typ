@@ -164,6 +164,7 @@ $
 Свойства бесконечно малых последовательностей:
 
 + Если $alpha_n$ и $beta_n$ - бесконечно малые последовательности, то $alpha_n + beta_n$ - бесконечно малая последовательность.
+
   _Доказательство._ $square$ Пусть $lim alpha_n = 0$, $lim beta_n = 0$. Тогда по определению предела 
   $
   forall epsilon > 0 space exists N_1 in NN: forall n > N_1: abs(alpha_n) < epsilon
@@ -174,6 +175,7 @@ $
   Обозначим $N = max{N_1, N_2}$. Тогда $forall n > N: abs(alpha_n + beta_n) <= abs(alpha_n) + abs(beta_n) < 2 epsilon$, что и означает, что $lim (alpha_n + beta_n) = 0$. $square.filled$
 
 + Если $alpha_n$ - бесконечно малая последовательность, а $a_n$ - ограничена, то $alpha_n dot a_n$ --- бесконечно малая последовательность.
+
   _Доказательство._ $square$ Пусть $lim alpha_n = 0$, $a_n$ ограничена, то есть $exists M > 0: forall n in NN: abs(a_n) < M$. Тогда для последовательности $beta_n = alpha_n dot a_n$ имеем
   $
     abs(beta_n) = abs(alpha_n) dot abs(a_n) <_((n > N)) epsilon dot M.

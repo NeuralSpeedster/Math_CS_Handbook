@@ -12,6 +12,10 @@
 
 #pagebreak()
 
+#include "../calculus/functions_limits.typ"
+
+#pagebreak()
+
 #include "../calculus/multiple_integrals.typ"
 
 #pagebreak()
@@ -21,5 +25,4 @@
 #pagebreak()
 
 #include "../calculus/number_series.typ"
-
 
