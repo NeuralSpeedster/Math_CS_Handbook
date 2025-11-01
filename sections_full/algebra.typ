@@ -8,8 +8,6 @@
 )
 = Алгебра
 
-Здесь много базы!
-
 
 #include "../algebra/permutations.typ"
 
