@@ -17,9 +17,9 @@
 
 #pagebreak()
 
-== Системы линейных уравнений
-
+#include "../algebra/linear_equations_systems.typ"
 
 #pagebreak()
 
-== Линейная зависимость и ранг
+#include "../algebra/determinants.typ"
+
