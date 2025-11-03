@@ -279,6 +279,12 @@ $square.filled$
     op("sgn") (sigma^(-1)) = op("sgn") (sigma)
   $
 ])
-_Доказатательство._ $square$
-
-$square.filled$
+_Доказатательство._ $square$ Согласно мультипликативности знака перестановки получаем:
+$
+  op("sgn") (e) = op("sgn") (sigma dot sigma') = op("sgn") (sigma) dot op("sgn") (sigma')
+$
+Но $op("sgn") (e) = 1$, поэтому
+$
+  op("sgn") (sigma) dot op("sgn") (sigma') = 1 => op("sgn") (sigma) = op("sgn") (sigma').
+$
+Что и требовалось доказать. $square.filled$
