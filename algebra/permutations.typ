@@ -251,3 +251,34 @@ $
 $
 Переход доказан и вместе с ним и утверждение $forall N in NN$. $square.filled$
 
+
+#theorem([
+  _Предложение._ Мультипликативное свойство знака:
+  $
+    op("sgn") (sigma dot sigma') = op("sgn") (sigma) dot op("sgn") (sigma')
+  $
+])
+_Доказатательство._ $square$ Пусть перестановки $sigma$ и $sigma'$ разложены на транспозиции:
+$
+  sigma = tau_1 dot tau_2 dot ... dot tau_k
+$
+$
+  sigma' = pi_1 dot pi_2 dot ... dot pi_s.
+$
+Тогда, напрямую умножив их, получим
+$
+  op("sgn") (sigma sigma') = op("sgn") (tau_1 dot tau_2 dot ... dot tau_k dot pi_1 dot pi_2 dot ... dot pi_s) = 
+  \ = (-1)^(k + s) = (-1)^k dot (-1)^s =  op("sgn") (sigma) dot op("sgn") (sigma'). 
+$
+$square.filled$
+
+
+#theorem([
+  _Предложение._ Знак обратной перестановки:
+  $
+    op("sgn") (sigma^(-1)) = op("sgn") (sigma)
+  $
+])
+_Доказатательство._ $square$
+
+$square.filled$
