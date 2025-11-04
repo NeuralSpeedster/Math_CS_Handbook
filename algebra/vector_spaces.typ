@@ -63,6 +63,13 @@ _Определение._ Векторным пространством назы
 
 + $forall v in V: 0 dot v = accent(0, ->)$.
 
-  _Доказательство._ $square$
+  _Доказательство._ $square$ $0 dot v = (0 + 0) dot v = 0 dot v + 0 dot v$. Добавим к обеим частям равенства $- (0 dot v$), тогда получим:
+  $accent(0, ->) = 0 dot v space square.filled$
 
-  $square.filled$
++ $forall lambda in RR: lambda dot accent(0, ->) = 0$.
+
+  _Доказательство._ $square$ $lambda dot accent(0, ->) = lambda dot (accent(0, ->) + accent(0, ->)) = lambda dot accent(0, ->) + lambda dot accent(0, ->) => lambda dot accent(0, ->) = 0$. $square.filled$
+
++ $forall v in V: (-1) dot v = -v$.
+
+  _Доказательство._ $square$ $v + (-1) dot v = 1 dot v + (-1) dot v = (1 + (-1)) dot v = 0 dot v = accent(0, ->).$ $square.filled$
