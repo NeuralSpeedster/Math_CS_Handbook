@@ -21,5 +21,9 @@
 
 #pagebreak()
 
+#include "../algebra/vector_spaces.typ"
+
+#pagebreak()
+
 #include "../algebra/determinants.typ"
 
