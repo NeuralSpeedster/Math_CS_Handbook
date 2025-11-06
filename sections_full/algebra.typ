@@ -25,5 +25,9 @@
 
 #pagebreak()
 
+#include "../algebra/rank.typ"
+
+#pagebreak()
+
 #include "../algebra/determinants.typ"
 
