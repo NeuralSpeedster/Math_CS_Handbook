@@ -145,7 +145,7 @@ $
 _Доказатательство._ $square$ Пусть у нас есть треугольная квадратная матрица $B$ с диагональю $mat(lambda_1, ..., lambda_n)$.
 
 $
-  det B = lambda_n dot mat(lambda_1, dots, dots, dots; 0, lambda_2, dots , dots; dots.v, dots, dots, dots;  0, 0, dots, 1; delim: "|")
+  det B = mat(lambda_1, dots, dots, dots; 0, lambda_2, dots , dots; dots.v, dots, dots, dots;  0, 0, dots, lambda_n; delim: "|")
 $
 Применим элементарное преобразование I типа: обнулим все элементы в $n$-м столбце выше единицы. 
 
