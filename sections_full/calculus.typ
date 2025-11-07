@@ -20,6 +20,14 @@
 
 #pagebreak()
 
+#include "../calculus/line_and_surface_integrals.typ"
+
+#pagebreak()
+
+#include "../calculus/differential_forms.typ"
+
+#pagebreak()
+
 #include "../calculus/beta_gamma_functions.typ"
 
 #pagebreak()
