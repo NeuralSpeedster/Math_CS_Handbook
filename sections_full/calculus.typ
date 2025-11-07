@@ -24,9 +24,9 @@
 
 #pagebreak()
 
-#include "../calculus/differential_forms.typ"
+//#include "../calculus/differential_forms.typ"
 
-#pagebreak()
+//#pagebreak()
 
 #include "../calculus/beta_gamma_functions.typ"
 
