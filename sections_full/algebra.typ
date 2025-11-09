@@ -35,3 +35,10 @@
 
 #include "../algebra/determinants.typ"
 
+
+#pagebreak()
+
+#include "../algebra/groups.typ"
+
+
+
