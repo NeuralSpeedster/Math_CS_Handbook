@@ -29,5 +29,9 @@
 
 #pagebreak()
 
+#include "../algebra/linear_mapping.typ"
+
+#pagebreak()
+
 #include "../algebra/determinants.typ"
 
