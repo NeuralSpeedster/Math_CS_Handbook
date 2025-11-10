@@ -400,3 +400,29 @@ $
   C_n^k = underbrace(1 + ... + 1, p) +...+ underbrace(1 + ... + 1, p) = 0
 $
 Поэтому остаются только $x^p$ и $y^p$. $square.filled$
+
+_Следсвствие._ Если $op("char") K = p > 0$, то $forall x, y in K:$
+$
+  (x_1 + ... + x_n)^p = x_1^p + ... + x_n^p
+$<char_p_x_y>
+
+=== Малая теорема Ферма
+
+#theorem([
+Пусть $p$ --- простое число. Тогда $forall n in ZZ:$
+$
+  n^p eq.triple n space (mod p)
+$
+])
+
+_Доказательство._ $square$ Рассмотрим $ZZ_p$:
+Надо доказать, что 
+$
+  overline(n^p) = overline(n)
+$
+Тогда по (@char_p_x_y) имеем:
+$
+  overline(n) = overline(1) + ... + overline(1) => overline(n^p) = overline(1)^p + ... + overline(1)^p = overline(1) + ... + overline(1) = overline(n)
+$
+Что и требовалось доказать.
+$square.filled$
