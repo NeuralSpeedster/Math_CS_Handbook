@@ -75,18 +75,6 @@ $ A times B = {(a, b) | a in A, space b in B} $
   - $(B inter C) times A = B times A inter C times A$
 
 
-=== Мощность множества
-
-Мощностью конечного множества $A = {a_1, a_2, ..., a_n}$ называется количество элементов в нём: $abs(A) = n$.
-
-*Утверждение 1.* $A inter B = empty => abs(A union B) = abs(A) + abs(B)$ 
-
-(#ref(<sets_union_card>, supplement: text("Уже доказано, см.", fill: blue)))
-
-*Утверждение 2.* $abs(A times B) = abs(A) dot abs(B)$ 
-
-(#ref(<sets_product>, supplement: text("Уже доказано, см.",fill: blue)))
-
 === Круги Эйлера
 
 Отношения между множествами можно визуально представить с помощью кругов Эйлера.
