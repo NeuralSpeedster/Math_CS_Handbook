@@ -15,3 +15,8 @@
 #pagebreak()
 
 #include "../probability/random_variables.typ"
+
+#pagebreak()
+
+#include "../probability/distributions.typ"
+
