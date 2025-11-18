@@ -201,3 +201,33 @@ $
   $
     (A + B) dot D = A dot D + B dot D
   $
+
+=== Взаимодействие транспонирования и алгебраических операций над матрицами
+
+_Прелоожение о транспонировании._
++ $(A + B)^T = A^T + B^T$
+
++ $(lambda dot A)^T = lambda dot A^T$
+  
++ $(A dot B)^T = B^T dot A^T$
+
+_Доказательство._
+$square$ 
+
++ Пусть $C = A + B$. Тогда $forall i, j$:
+  $
+    c_(i j) ^ T = c_(j i) = a_(j i) + b_(j i) = a_(i j) ^ T + b_(i j) ^ T.
+  $
+
++ Пусть $C = lambda dot A$, $forall i, j$:
+  $
+    c_(i j)^T = c_(j i) = lambda dot a_(j i) = lambda dot a_(i j)^T.
+  $
+
++ Пусть $C = A dot B$, $forall i, j:$
+  $
+    c_(i j)^T = c_(j i) = sum_k a_(j k) dot b_(k i) = sum_k a_(k j)^T dot b_(i k)^T = sum_k b_(i k)^T dot a_(k j)^T
+  $
+  Отсюда $C^T = B^T dot A^T.$ $square.filled$
+
+  
