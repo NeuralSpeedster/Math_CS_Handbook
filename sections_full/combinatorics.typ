@@ -27,5 +27,9 @@
 
 #pagebreak()
 
+#include "../combinatorics/mobius_function.typ"
+
+#pagebreak()
+
 #include "../combinatorics/generating_functions.typ"
 
