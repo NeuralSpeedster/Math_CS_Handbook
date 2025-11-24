@@ -23,30 +23,34 @@ text(size: 14pt, datetime.today().display("[day].[month].[year]"))
 
 #set page(width: 210mm, height: 297mm, margin: 2.5cm, numbering: "1",)
 
+#let sections(s1, s2, s3, s4, s5, s6) = {
+  if s1 == 1 {
+    include "sections_full/algebra.typ"
+    pagebreak()
+  }
+  if s2 == 1 {
+    include "sections_full/calculus.typ"
+    pagebreak()
+  }
+  if s3 == 1 {
+    include "sections_full/combinatorics.typ"
+    pagebreak()
+  }
+  if s4 == 1 {
+    include "sections_full/probability.typ"
+    pagebreak()
+  }
+  if s5 == 1 {
+    include "sections_full/algorithms.typ"
+    pagebreak()
+  }
+  if s6 == 1 {
+    include "sections_full/DS.typ"
+  }
+}
+
 #outline(title: "Содержание")
 
 #pagebreak()
 
-#include "sections_full/algebra.typ"
-
-#pagebreak()
-
-#include "sections_full/calculus.typ"
-
-#pagebreak()
-
-#include "sections_full/combinatorics.typ"
-
-#pagebreak()
-
-#include "sections_full/probability.typ"
-
-#pagebreak()
-
-#include "sections_full/algorithms.typ"
-
-#pagebreak()
-
-#include "sections_full/DS.typ"
-
-
+#sections(1, 1, 1, 1, 1, 1)

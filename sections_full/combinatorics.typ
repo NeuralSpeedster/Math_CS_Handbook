@@ -31,5 +31,12 @@
 
 #pagebreak()
 
+#include "../combinatorics/sum_decomposition.typ"
+
+#pagebreak()
+
 #include "../combinatorics/generating_functions.typ"
+
+"
+
 
