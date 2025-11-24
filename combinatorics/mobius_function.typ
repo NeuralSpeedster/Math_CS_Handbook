@@ -43,7 +43,7 @@ $
 
 === Формула обращения Мёбиуса
 #theorem([
-Пусть $f(n)$ --- функция натурального аргумента. Пусть $g(n) = sum_(d | n) f(d)$. Тогда можно выразить $f$ через $g$:
+#emoji.book.red Пусть $f(n)$ --- функция натурального аргумента. Пусть $g(n) = sum_(d | n) f(d)$. Тогда можно выразить $f$ через $g$:
 $
   f(n) = sum_(d | n) mu(d) dot g(n/d) = sum_(d | n) mu(n/d) dot g(d)
 $
@@ -132,3 +132,108 @@ $
  \
  mu(x, y) = - sum_(x prec.curly z prec y) mu(x, z), "если" x prec y
 $
+
+
+#theorem(
+  [
+    #emoji.book.red _Теорема._ Если $(P, prec.curly) = (NN, |)$, то
+    $
+      mu(x, y) = mu(y/x)
+    $
+  ]
+)
+
+_Доказательство._ $square$ Индукция по величине $x/y$. 
+
++ База $mu(x, x) = mu(x/x) = 1$.
+
++ Предположим, что это верно и сделаем шаг индукции. Пусть отношение имеет каноническое разложение
+  $
+    y = x dot p_1^alpha_1 dot ... dot p_s^alpha_s
+  $
+  Запишем обобщённую функцию Мёбиуса
+  $
+    mu(x, y) = - sum_(x prec.curly z prec y) mu(x, z)
+  $
+  Распишем $z = x dot p_1^beta_1 dot ... dot p_s^beta_s$, где $forall i space 0 <= beta_i <= alpha_i$, причём $exists i: beta_i < alpha_i$, так как $z prec y$ строго! Тогда 
+  $
+    mu(x, y) = - sum_(x prec.curly z prec y) mu(z/x) 
+    =
+    - sum_((beta_1, ..., beta_s): \
+    forall i: space 0 <= beta_i <= alpha_i, \
+    exists i: beta_i < alpha_i
+    )
+    mu(p_1^beta_1 dot ... dot p_s^beta_s)
+  $
+  + Если все $alpha_i = 1$, то 
+    $
+      mu(x, y) = -sum_(
+        (beta_1, ..., beta_s): \
+        forall i: space 0 <= beta_i <= 1, \
+        exists i: beta_i < 1
+      )
+      mu(p_1^beta_1 dot ... dot p_s^beta_s)
+      =
+      - (C_s^0 - C_s^1 + ... \ ...+ (-1)^(s-1) C_s^(s-1))
+      =
+      - (-(-1)^s C_s^s) = (-1)^s = mu(y/x).
+    $<generalized_mob_proof>
+  + Если $exists i: alpha_i >= 2$, то в суммировани в выкладке (@generalized_mob_proof) появляется $(-1)^s C_s^s$, из-за чего сумма равна нулю, что и есть $mu(y/x)$.
+$square.filled$
+
+=== Обращение Мёбиуса на ЧУМе
+
+
+#theorem([
+  #emoji.book.red _Теорема._ Пусть на $(P, prec.curly)$ верно $g(y) = sum_(x prec.curly y) f(x)$. Тогда 
+  $
+    f(y) = sum_(x prec.curly y) g(x) dot mu(x, y)
+  $
+])
+
+_Доказательство._ $square$
+
+$
+  sum_(x prec.curly y) mu(x, y) dot (sum_(z prec.curly x) f(z)) = sum_(z prec.curly y) f(z) dot (sum_(z prec.curly x prec.curly y) mu(x, y)) =_("лемма") sum_(z prec.curly y) f(z) dot bold(1)_{y = z},
+$
+где $bold(1)_{y=z}$ --- индикатор.
+
+Тогда 
+$
+  sum_(x prec.curly y) g(x) dot mu(x, y) = f(y) dot 1 + sum_(z prec y) f(z) dot bold(1)_{y = z} = f(y).
+$
+$square.filled$
+
+Теперь докажем лемму, использованную в доказательстве теоремы.
+
+#emoji.book.orange _Лемма._ Сумма значений функции Мёбиуса равна индикатору:
+$
+  sum_(z prec.curly x prec.curly y) mu(x, y) = bold(1)_{y = z}
+$
+_Доказательство._ $square$
+Если $z = y$, то 
+$
+  sum_(z prec.curly x prec.curly y) mu(x, y) = mu(y, y) = 1 = bold(1)_{y = z}.
+$
+Если $z prec y$, то рассмотрим два случая: 
+
++ Между $z$ и $y$ нет других элементов. Тогда 
+  $
+    sum_(z prec.curly x prec.curly y) mu(x, y) = mu(y, y) + sum_(z prec.curly x prec y) mu(x, y) = 1 + mu(z, y)
+    = \
+    =
+    1 - sum_(z prec.curly u prec y) mu(z, u) = 1 - mu(z, z) = 0.
+  $
+
++ Индукция по длине длиннейшей цепочки значков $prec$ между $z$ и $y$. 
+  $
+    sum_(z prec.curly x prec.curly y) mu(x, y) = 1 + sum_(z prec.curly x prec y) mu(x, y) = 1 - sum_(z prec.curly x prec y) sum_(x prec.curly u prec.curly y) mu(x, u) =
+    \
+    =
+    1 - sum_(z prec.curly u prec y) underbracket(sum_(z prec.curly x prec.curly u) mu(x, u), bold(1)_{z = u} "по предп.\n инд.") = 1 - 1 = 0. space square.filled
+  $
+
+
+=== Пример применения обращения Мёбиуса на ЧУМе
+
+
