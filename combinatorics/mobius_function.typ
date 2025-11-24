@@ -234,6 +234,78 @@ $
   $
 
 
-=== Пример применения обращения Мёбиуса на ЧУМе
+=== Пример применения обращения Мёбиуса на ЧУМе для доказательства ФВИ
+
+Обозначим $cal(R_n) = {1, ..., n}$. Рассмотрим ЧУМ $(2^cal(R_n), subset.eq)$.
+
+Рассмотрим произвольные множества $A_1, ..., A_n$, необязательно элементы $2^cal(R_n)$, и пусть $A = A_1 union A_2 union ... union A_n$.
+
+Пусть $I subset.eq cal(R_n)$. 
+
+Определим $f(I)$ как количество элементов из $A$, которые принадлежат всем множествам $A_i$ при $i in.not I$ и могут как принадлежать, так и не принадлежать $A_i, i in I.$
+
+$
+  f(I) = abs(op(inter.big, limits: #true)_(i in.not I) A_i)
+$
+
+И пусть $g(I)$ это количество элементов из $A$, которые принадлежат всем множествам $A_i$ при $i in.not I$ и не принадлежат ни одному $A_i$ при $i in I$.
+
+Тогда можно разбить пересечение множеств на части:
+$
+  f(I) = sum_(I' subset.eq I) g(I')
+$
+И, используя формулу обращения Мёбиуса на ЧУМе, получаем
+
+$
+  g(I) = sum_(I' subset.eq I) f(I') dot mu(I', I)
+$
+
+#emoji.book.orange _Лемма._ На ЧУМе $(2^cal(R_n), subset.eq)$ функция Мёбиуса имеет вид
+
+$
+  mu(I', I) = (-1)^(abs(I) - abs(I'))
+$
+докажем её позже.
+
+Если $I = cal(R_n)$, то $g(I) = 0$, поэтому 
+
+$
+  0 = sum_(I' subset.eq cal(R_n)) f(I') dot (-1)^(n - abs(I')) dot abs(op(inter.big, limits: #true)_(i in.not I') A_i ) = f(cal(R_n)) + sum_(I' subset R_n) (-1)^(n - abs(I')) dot abs(op(inter.big, limits: #true)_(i in.not I') A_i )
+$
+
+Откуда можно найти мощность объединения, так как $f(cal(R_n)) = abs(op(union.big)_(i=1)^n A_i)$
+
+$
+  abs(op(union.big, limits: #true)_(i=1)^n A_i) = 
+  sum_(I' subset cal(R_n)) (-1)^(n - abs(I') + 1) dot abs(op(inter.big, limits: #true)_(i in.not I') A_i )
+$
+Преобразуем через дополнение, получая ФВИ
+
+#theorem([
+$
+  abs(op(union.big, limits: #true)_(i=1)^n A_i) =
+  sum_(J != empty \ J subset.eq cal(R_n)) (-1)^(abs(J) + 1) dot abs(op(inter.big, limits: #true)_(j in J) A_j)
+$
+])
+
+_Доказательство леммы._ $square$ Докажем индукцией по $abs(I) - abs(I')$. 
+
++ База. $abs(I) - abs(I') = 0$. Тогда $mu(I', I) = 1 = (-1)^0$.  #emoji.checkmark.box
+
++ Шаг индукции. Пусть предположение верно, и мы знаем, что $I' subset I$. Тогда 
+  $
+    mu(I', I) = - sum_(I' subset.eq J subset I) mu(I', J)
+  $
+  Так как $abs(J) - abs(I') < abs(I) - abs(I')$, то по предположению индукции
+  $
+    mu(I', J) = (-1)^(abs(J) - abs(I'))
+  $
+  Поэтому 
+  $
+    mu(I', I) = - sum_(I' subset.eq J subset I) (-1)^(abs(J) - abs(I')) = - sum_(k = abs(I'))^(abs(J)-1)
+    (-1)^(k - abs(I')) dot C_(abs(I) - abs(I'))^(k - abs(I')) = \
+    =
+    - sum_(l=0)^(abs(I) - abs(I') - 1) (-1)^l dot C_(abs(I) - abs(I'))^l = - (- (-1)^(abs(I) - abs(I'))) = (-1)^(abs(I) - abs(I')). space square.filled
+  $
 
 
