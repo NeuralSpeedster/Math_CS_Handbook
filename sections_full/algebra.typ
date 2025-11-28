@@ -40,5 +40,9 @@
 
 #include "../algebra/groups.typ"
 
+#pagebreak()
+
+#include "../algebra/polynomials.typ"
+
 
 
