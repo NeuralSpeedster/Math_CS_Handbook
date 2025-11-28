@@ -27,3 +27,12 @@
 #let ints  = $op("int")$ 
 
 #let int = $op(integral, limits: #true)$
+
+// Функция для получения текущего заголовка
+#let currentH(level: 1) = {
+  return context query(
+  selector(heading.where(level: level)).before(here())
+).len()
+}
+
+

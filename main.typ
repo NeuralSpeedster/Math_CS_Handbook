@@ -1,8 +1,23 @@
 #import "util.typ": *
+#import "@preview/headcount:0.1.0": *
 
 #set text(12pt, lang: "ru", )
-#set math.equation(numbering: "(1)", supplement: none)
+
 #set heading(numbering: "A.1.",)
+
+#let eq_num(n) = {
+  return [(#currentH(level: 2).#n)] 
+}
+
+
+#set math.equation(supplement: none,
+numbering: eq_num
+)
+
+#show heading: reset-counter(counter(math.equation), levels: 2)
+#show heading: reset-counter(counter(math.equation), levels: 1)
+
+
 #set par(
   leading: 1em,
   first-line-indent: (amount: 1.25em, all: true),
