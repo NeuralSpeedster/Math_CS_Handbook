@@ -35,8 +35,12 @@
 
 #pagebreak()
 
+#include "../combinatorics/linear_recurrences.typ"
+
+#pagebreak()
+
 #include "../combinatorics/generating_functions.typ"
 
-"
+
 
 
