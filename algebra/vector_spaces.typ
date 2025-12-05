@@ -198,7 +198,7 @@ _Определение._ Система векторов $S = {v_1, v_2, ..., v
     a_(m 1) x_1 + a_(m 2) x_2 + ... + a_(m n) x_n = 0,
 
   )
-  $<homogenous_sle>
+  $ //<homogenous_sle>
   Здесь $m < n$, то есть число неизвестных больше числа уравнений. Мы знаем, что #link(<homogenous_sle>)[#text([такая система всегда имеет ненулевое решение], fill: blue)]. $exists (x_1^0, ..., x_n^0) = (lambda_1, ..., lambda_n)$, где хотя бы один из $lambda_i$ не равен нулю, такие, что $forall i=1,...,m$:
   $
     sum_(j=1)^m a_(i j) lambda_j = 0
@@ -330,7 +330,7 @@ _Определение._ Подпространством векторного 
 
 + $accent(0, ->) in U$.
 
-  _Доказательство._ $square$ Так как $U$ непусто, то по второму свойству $0 dot accent(0, ->) in U,$ но $0 dot accent(0, ->) = accent(0, ->)$. $square.filled$
+  _Доказательство._ $square$ Так как $U$ непусто, то $exists u in U$ и по второму свойству $0 dot u in U,$ но $0 dot u = accent(0, ->)$. $square.filled$
 
 + $U$ само является векторным пространством относительно тех операций, что определены на множестве $V$.
 
@@ -344,7 +344,7 @@ _Определение._ Подпространством векторного 
 
 === Фундаментальная система решений
 
-#theorem([
+#theorem([ #emoji.book.red _Предложение._
   Рассмотрим произвольную однородную систему линейных уравнений с матрицей коэффициентов $A$.
   $
   cases(
@@ -381,4 +381,75 @@ $
 //TODO: дописать доказательство
 
 _Определение._ Базис пространства решений однородной системы линейных уравнений называется _фундаментальной системой решений_.
+
+
+=== Пересечение и сумма подпространств
+
+#theorem([
+Пусть $V$ --- векторное пространство над полем $F$, $dim V < infinity$. И пусть $U, W subset.eq V$. Тогда пересчение подпространств в теоретико-множественном смысле --- тоже подпространство: $(U inter W) subset.eq V$. 
+])
+_Доказательство._ $square$ Проверяем:
++ $accent(0, ->) in U, W => accent(0, ->) in (U inter W)$
+
++ $forall x, y in (U inter W): x, y in U$ и $x, y in W$. Поэтому $(x + y) in U$ и $(x + y) in W => (x + y) in (U inter W)$.
+
++ Пусть $lambda in F$. Тогда $forall x in (U inter W): x in U, x in W => lambda dot x in U, lambda dot x in W => lambda dot x in (U inter W)$.
+$square.filled$
+
+_Определение._ Суммой подпространств $U, W subset.eq V$ векторного пространства $V$ называется множество 
+$
+  U + W := {u + w | u in U, w in W}
+$
+
+#theorem([
+#emoji.book.red _Предлоежение._ Сумма подпространств --- тоже подпространство в $V$.
+])
+_Доказательство._ $square$ Рассмотрим $u_1, u_2 in U$, $w_1, w_2 in W$. Надо проверить, что $[(u_1 + w_1) + (u_2 + w_2)] in (U + W)$, но $(u_1 + w_1) + (u_2 + w_2) = (u_1 + u_2) + (w_1 + w_2)$. Аналогично проверяется замкнутость относительно умножения на скаляр: $lambda dot (u + w) = lambda dot u + lambda dot w$.
+$square.filled$
+
+#theorem([
+#emoji.book.red _Теорема._ Пусть $V$ --- векторное пространство, $U, W$ --- подпространства $V$. 
+
+$
+  dim(U inter W) + dim(U + W) = dim U + dim W
+$
+])
+
+_Доказательство._ $square$ Пусть $dim (U inter W) = p$, $dim U = q$, $dim W = r$. Пусть $a = {a_1, ..., a_p}$ --- базис в $U inter W$. Так как $(U inter W) subset.eq U$ и $(U inter W) subset.eq W$, то $a$ можно дополнить до базиса в $U$ и $W$: $exists b = {b_1, ..., b_(q-p)}$ и $exists c = {c_1, ..., c_(r - p)}$, такие что $a union b$ --- базис $U$ и $a union c$ --- базис $W$. Докажем, что $a union b union c$ --- базис в $U + W$.
+
++ Покажем, что $<a union b union c> = U + W$. 
+
+  Если $v in (U + W)$, то $v = u + w$, где $u in U, w in W$. 
+
+  - $u in <a union b> subset.eq <a union b union c>$.
+  - $w in <a union c> subset.eq <a union b union c>$.
+  - $=> (u + w) = v in <a union b union c>$.
+  - $=> (U + W) subset.eq <a union b union c>$.
+  - Обратно, $<a union b union c> subset.eq (U + W)$, так как $<a union b union c> = underbracket(<a> + <b>, in U) + underbracket(<c>, in W) subset.eq U + W$.
+
++ Проверим линейную независимость. Пусть $x = alpha_1 a_1 + ... + alpha_p a_p$, $y = beta_1 b_1 + ... + beta_(q-p) b_(q-p)$ и $z = gamma_1 c_1 + ... + gamma_(r-p) c_(r-p)$. Пусть 
+  $
+    x + y + z = accent(0, ->) => z = (-x - y) in U.
+  $
+  С другой стороны, по определению $z in W$, а следовательно, $z in (U inter W)$. Поэтому $exists lambda_1, ..., lambda_p$:
+  $
+    z = lambda_1 a_1 + ... + lambda_p a_p.
+  $
+  Итак, 
+  $
+    lambda_1 a_1 + ... + lambda_p a_p - gamma_1 c_1 - ... - gamma_(r-p) c_(r-p) = accent(0, ->)
+  $
+  Но это ЛК векторов базиса $a union c $ пространства $W$. Поэтому $lambda_1 = ... lambda_p = gamma_1 = ... = gamma_(r-p) = 0$. Поэтому $z = accent(0, ->)$, остаётся 
+  $
+    alpha_1 a_1 + ... + alpha_p a_p + beta_1 b_1 + ... + beta_(q-p) b_(q-p) = accent(0, ->)
+  $
+  Это линейная комбинация векторов базиса $(a union b)$ пространства $U$. Значит $alpha_1 = ... alpha_p = beta_1 = ... = beta_(q - p) = 0$.
+
+Итак, $a union b union c$ --- базис в $U + W$. Посчитаем размерность:
+
+$
+  dim(U + W) = abs(a) + abs(b) + abs(c) = p + (q - p) + (r - p) = q + r - p = \
+  = dim(U) + dim(W) - dim(U inter W). space square.filled
+$
+
 
