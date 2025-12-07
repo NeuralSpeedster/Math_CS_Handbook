@@ -16,6 +16,10 @@
 
 #pagebreak()
 
+#include "../calculus/Lebesgue_measure.typ"
+
+#pagebreak()
+
 #include "../calculus/multiple_integrals.typ"
 
 #pagebreak()
