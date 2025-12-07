@@ -44,5 +44,8 @@
 
 #include "../algebra/polynomials.typ"
 
+#pagebreak()
+
+#include "../algebra/polynomials_ divisibility.typ"
 
 
