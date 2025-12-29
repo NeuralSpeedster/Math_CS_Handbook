@@ -108,14 +108,105 @@ $
 
 _Доказательство._ $square$
 
-+ Необходимость. Пусть $f$ дифференцируема в точке $z_0$ и $f'(z_0) = a + i b$. Тогда $Delta f = f'(z_0) Delta z + o(Delta z) = (a + i b)(Delta x + i Delta y) + alpha_1 (Delta x, Delta y) + i alpha_2 (Delta x, Delta y)$. Тогда, имея в виду $Delta f = delta u + i delta v$, получаем:
-$
++ Необходимость. Пусть $f$ дифференцируема в точке $z_0$ и $f'(z_0) = a + i b$. Тогда $Delta f = f'(z_0) Delta z + o(Delta z) = (a + i b)(Delta x + i Delta y) + alpha_1 (Delta x, Delta y) + i alpha_2 (Delta x, Delta y)$.  Тогда, имея в виду $Delta f = Delta u + i Delta v$, получаем:
+  $
   cases(
   Delta u = a Delta x - b Delta y + alpha_1 (Delta x, Delta y),
   Delta v = b Delta x + a Delta y + alpha_2 (Delta x, Delta y)
   )
+  $
+  Мы знаем, что $alpha(z) = o(Delta z)$, то есть $limits(lim)_(Delta z -> 0) frac(abs(alpha(Delta z)), Delta z) = 0$. Кроме того, $abs(alpha_1) <= abs(alpha)$ и $abs(alpha_2) <= abs(alpha)$. Следовательно, $limits(lim)_(Delta z -> 0) frac(abs(alpha_1 (Delta x, Delta y)), sqrt(Delta x^2 + Delta y^2)) = 0$ и $limits(lim)_(Delta z -> 0) frac(abs(alpha_2 (Delta x, Delta y)), sqrt(Delta x^2 + Delta y^2)) = 0$. Отсюда следует, что функции $u$ и $v$ дифференцируемы в точке $(x_0, y_0)$ и
+
+  $
+  a = frac(partial u, partial x) (x_0, y_0) = frac(partial v, partial y) (x_0, y_0), \
+  -b = frac(partial u, partial y) (x_0, y_0) = - frac(partial v, partial x) (x_0, y_0).  
+  $
+
++ Достаточность. Пусть функции $u$ и $v$ дифференцируемы в точке $(x_0, y_0)$ и условия Коши-Римана выполняются в этой точке.
+
+  $
+    Delta f = Delta u + i Delta v = frac(partial u, partial x) Delta x + frac(partial u, partial y) Delta y + alpha_1 (Delta x, Delta y) + i (frac(partial v, partial x) Delta x + frac(partial v, partial y) Delta y + alpha_2 (Delta x, Delta y)) = \ = 
+
+    (frac(partial u, partial x) + i frac(partial v, partial x)) (Delta x + i Delta y) + alpha_1 (Delta x, Delta y) + i alpha_2 (Delta x, Delta y) 
+  $
+
+  Но, обозначив $alpha (Delta x, Delta y) = alpha_1 (Delta x, Delta y) + i alpha_2 (Delta x, Delta y)$, получаем
+  $
+    abs(frac(alpha(Delta x, Delta y), Delta z)) <= frac(abs(alpha_1 (Delta x, Delta y)) + abs(alpha_2 (Delta x, Delta y)), sqrt(Delta x^2 + Delta y^2)) arrow.long_(z -> z_0) 0.
+  $
+  Итак, $Delta f = A dot Delta z + o(Delta z)$, где $A = frac(partial u, partial x) + i frac(partial v, partial x)$, таким образом, $f$ дифференцируема в точке $z_0$ и $f'(z_0) = A$.
+  $square.filled$
+
+
+_Определение._ Функция $f$ называется регулярной (или голоморфной) в области $G subset CC$, если она дифференцируема в каждой точке этой области.
+
+_Определение._ Функцию называют регулярной в точке $z_0$, если она регулярна в некоторой окрестности этой точки.
+
+Например, функция $f(z) = abs(z)^2$ не является регулярной ни в одной точке, включая $z = 0$.
+
+
+=== Комплексная экспонента
+
+
+_Определение._ Комплексной экспонентой называют такую функцию от $z = x + i y$:
+
+$
+  e^z := e^x (cos y + i sin y)
+$
+
+Ещё можно определить комплексную экспоненту с помощью ряда Тейлора:
+
+$
+  e^z := sum_(n=0)^(oo) frac(z^n, n!).
+$
+
+Найдем производную комплексной экспоненты, полагая $u(x, y) = e^x cos y$, $v(x, y) = e^x sin y$. Для этого проверим условвия Коши-Римана:
+
+$
+  cases(
+  frac(partial u, partial x) = e^x cos y = frac(partial v, partial y),
+  frac(partial u, partial y) = - e^x sin y = - frac(partial v, partial x).
+  )
+$
+это верно $forall z in CC$, поэтому $e^z$ регулярна во всей комплексной плоскости и
+$
+  (e^z)' = frac(partial u, partial x) + i frac(partial v, partial x) = e^x cos y + i e^x sin y = e^z.
+$
+
+Это же можно получить, продифференцировав ряд Тейлора почленно:
+$
+  (e^z)' = sum_(n=1)^(oo) frac(n z^(n-1), n!) = sum_(n=1)^(oo) frac(z^(n-1), (n-1)!) = sum_(m=0)^(oo) frac(z^m, m!) = e^z.
 $
 
 
-$square.filled$
+=== Тригонометрические и гиперболические функции комплексного переменного
 
+_Определение._ Комплексные синус и косинус определяются следующим образом
+
+$
+  sin z := frac(e^(i z) - e^(- i z), 2 i), \ cos z := frac(e^(i z) + e^(- i z), 2).
+$
+Можно показать, что если $z = x in RR$, то эти определения совпадают с обычными определениями синуса и косинуса.
+
+Функции $sin z$ и $cos z$ регулярны во всей комплексной плоскости, и их производные равны
+$
+  (sin z)' = cos z, \ (cos z)' = - sin z.
+$
+
+
+_Определение._ Комплексные гиперболические функции определяются следующим образом:
+
+$
+  op("sh") z := frac(e^z - e^(-z), 2), \ op("ch") z := frac(e^z + e^(-z), 2).
+$
+
+Функции $op("sh") z$ и $op("ch") z$ регулярны во всей комплексной плоскости, и их производные равны
+$
+  (op("sh") z)' = op("ch") z, \ (op("ch") z)' = op("sh") z.
+$
+
+Связь между тригонометрическими и гиперболическими функциями выражается следующими формулами:
+
+$
+\ op("sh") z = i sin (i z), \ op("ch") z = cos (i z).
+$
