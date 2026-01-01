@@ -161,7 +161,50 @@ $
   1/(2pi i) int_Gamma f(zeta) / (zeta - z) d zeta = 1/(2pi i) int_(gamma_r) f(zeta) / (zeta - z) d zeta.
 $
 
+$
+  1/(2pi i) int_Gamma f(zeta) / (zeta - z) d zeta - f(z) = 1/(2pi i) int_(gamma_r) (f(zeta) - f(z)) / (zeta - z) d zeta.
+$
+Так как $f$ регулярна в $G$, то она непрерывна в $z$. Следовательно, 
+$forall epsilon > 0 space exists delta > 0: abs(z - zeta) < delta => abs(f(z) - f(zeta)) < epsilon$.
+
+$
+  abs(1/(2pi i) int_(gamma_r) (f(zeta)) / (zeta - z) d zeta - f(z)) <= abs(1/(2pi i)) int_(gamma_r) abs(f(zeta) - f(z)) / abs(zeta - z) abs(d zeta) < 1 / (2 pi) epsilon/r 2 pi r = epsilon.
+  1/(2pi) int_(gamma_r) epsilon / r dot abs(d zeta) = epsilon.
+$
 
 $square.filled$
+
+
+_Определение._ Пусть $gamma$ --- кусочно-гладкая кривая в комплексной плоскости, а функция $g$ непрерывна на $gamma$. 
+Тогда функция $I(z)$ называется интегралом типа Коши от функции $g$ по кривой $gamma$:
+
+$
+  I(z) = 1/(2pi i) int_gamma (g(zeta)) / (zeta - z) d zeta
+$
+
+#theorem([
+
+#emoji.book.red _Теорема._ В условиях данного определения функция $I$ является бесконечно дифференцируемой
+и 
+$
+  I^((n)) (z) = n! / (2 pi i) int_gamma (g(zeta)) / (zeta - z)^(n+1) d zeta, quad n in NN.
+$
+])
+
+
+#theorem([
+#emoji.book.red _Теорема._ Если функция $f: G -> CC$ регулярна на области $G$, то она бесконечно дифференцируема на области $G$.
+
+])
+
+_Доказательство._ $square$ Пусть $z in G$. Тогда существует такой радиус $r > 0$, что $overline(B)_r (z) subset G$. По интегральной формуле Коши
+
+$
+  f(z) = 1/(2 pi i) int_(partial B_r (z)) (f(zeta)) / (zeta - z) d zeta.
+$
+
+отсюда следует, что $f$ бесконечно дифференцируема в открытом круге $B_r (z)$, так как интеграл типа Коши бесконечно дифференцируем. Поскольку $z$ --- произвольная точка области $G$, то $f$ бесконечно дифференцируема на всей области $G$.
+$square.filled$
+
 
 
