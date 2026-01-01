@@ -52,5 +52,8 @@
 
 #pagebreak()
 
+#include "../calculus/taylor_series.typ"
+
+#pagebreak()
 
 
