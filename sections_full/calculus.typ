@@ -56,4 +56,6 @@
 
 #pagebreak()
 
+#include "../calculus/singularities_residues.typ"
+
 
