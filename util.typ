@@ -37,3 +37,5 @@
 
 #let pp = $upright(bold(P))$ 
 
+#let Res(f, a) = $limits(op("Res"))_#a #f$ 
+
