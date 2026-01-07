@@ -8,15 +8,35 @@
 
 + Если $f$ чётна, то $forall a > 0: limits(integral)_(-a)^(a)  f(x) d x = 2 limits(integral)_0^(a)  f(x) d x$
 
-+ Теорема о среднем: пусть $a < b$. Тогда $exists c in (a, b):$
++ *Теорема о среднем:* пусть $a < b$. Тогда $exists c in (a, b):$
     $
       f(c) = 1/(b-a) int_a^b f(x) d x
     $
   (очевидно следует из теоремы Лагранжа)
 
-+ $limits(int)_a^b f (x) d x = limits(int)_a^b f(a + b - x) d x$.
++ *Подстановка:* $limits(int)_a^b f (x) d x = limits(int)_a^b f(a + b - x) d x$.
 
-+ $forall a in RR:$ $ d/(d t) limits(int)_a^t f(x) d x = f(t). $
+
++ *Свойство симметрии:*
+  $
+    integral_0^(pi/2) f(sin x) d x = integral_0^(pi/2) f(cos x) d x
+  $
+
+
++ *Дифференцирование по параметру:* Пусть интеграл зависит от параметра $alpha$, и пределы интегрирования также являются функциями от $alpha$:
+  $
+    d/(d alpha) limits(integral)_(phi(alpha))^(psi(alpha)) f(x; alpha) d x = f(psi(alpha); alpha) dot psi'(alpha) - f(phi(alpha); alpha) dot phi'(alpha) 
+    + \
+    
+    + limits(integral)_(phi(alpha))^(psi(alpha)) frac(partial f, partial alpha)  d x
+  $
+
++ *Интеграл Фруллани:* 
+  Если существуют конечные пределы $f(0)$ и $f(oo)$, то:
+  $
+    limits(integral)_0^(oo) frac(f(a x) - f(b x), x) d x = (f(oo) - f(0)) ln(a/b)
+  $
+ 
 
 === Разложение на простейшие дроби
 
@@ -31,3 +51,35 @@ $
 ])
 
 Для случая $K = RR$, который нас и интересует, неприводимые многочлены либо линейны, либо квадратичны с корнями из $CC \\ RR$. 
+
+
+_Следствие._ Пусть над полем $K$ имеет место $g = (x-c_1)(x-c_2)...(x-c_n)$ и все $c_i$ различны, тогда из представления в сумму простейший дробей имеем 
+$
+  f/g = a_1/(x-c_1) + a_2/(x-c_2) + ... + (a_n)/(x-c_n),
+$
+
+откуда при $x = c_i$ получаем
+$
+  f(c_i) = a_i (c_i - c_1)...(c_i - c_(i-1)) (c_i - c_(i+1))...(c_i - c_n) = a_i dot g'(c_i).
+$
+Поэтому коэффициенты $a_i$ можно найти, разделив значение числителя на значение формальной производной знаменталя:
+$
+  a_i = f(c_i)/(g'(c_i)).
+$
+В итоге разложение правильной дроби $f/g$ будет выглядеть так:
+
+$
+  f/g = sum_(i=1)^n f(c_i)/((x-c_i) g'(c_i)).
+$
+
+#emoji.quest *Задачи:*
+
++ Пусть $n in NN$ и $epsilon_0, ..., epsilon_(n-1) in root(n, 1)$ --- корни из единицы. Доказать, что 
+  $
+    1/(x^n - 1) = 1/n sum_(i=0)^(n-1) epsilon_i / (x - epsilon_i).
+  $
+ #emoji.pen _Решение._ $square$ Согласно следствию из теоремы о разложении правильной дроби, $c_i = epsilon_i$, $f(c_i) = 1$, $g'(c_i) = n x^(n-1) #line(angle: 1.57rad, stroke: 0.5pt)_(x=epsilon_i ) = n epsilon_i^(n-1)$. Поэтому 
+ $
+   1/(x^n - 1) = sum_(i=0)^(n-1) 1/((x - epsilon_i) n epsilon_i^(n-1)) = 1/n sum_(i=0)^(n-1) epsilon_i / (x - epsilon_i). space square.filled
+ $ 
+
