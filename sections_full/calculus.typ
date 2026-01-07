@@ -16,6 +16,11 @@
 
 #pagebreak()
 
+
+#include "../calculus/integration.typ"
+
+#pagebreak()
+
 //#include "../calculus/Lebesgue_measure.typ"
 
 //#pagebreak()
