@@ -83,3 +83,6 @@ $
    1/(x^n - 1) = sum_(i=0)^(n-1) 1/((x - epsilon_i) n epsilon_i^(n-1)) = 1/n sum_(i=0)^(n-1) epsilon_i / (x - epsilon_i). space square.filled
  $ 
 
+
+
+

@@ -48,4 +48,10 @@
 
 #include "../algebra/polynomials_ divisibility.typ"
 
+#pagebreak()
+
+#include "../algebra/linear_operators.typ"
+
+
+
 
