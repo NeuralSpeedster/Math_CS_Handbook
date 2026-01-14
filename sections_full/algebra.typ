@@ -52,6 +52,10 @@
 
 #include "../algebra/linear_operators.typ"
 
+#pagebreak()
+
+#include "../algebra/bilinear_fucntions.typ"
+
 
 
 
