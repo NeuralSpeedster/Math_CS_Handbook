@@ -56,6 +56,7 @@
 
 #include "../algebra/bilinear_fucntions.typ"
 
+#pagebreak()
 
-
+#include "../algebra/euclidian_spaces.typ"
 
