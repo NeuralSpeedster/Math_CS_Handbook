@@ -37,5 +37,7 @@
 
 #let pp = $upright(bold(P))$ 
 
+#let cov(x, y) = $op("Cov") (#x, #y)$
+
 #let Res(f, a) = $limits(op("Res"))_#a #f$ 
 
