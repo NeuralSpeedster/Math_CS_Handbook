@@ -63,4 +63,9 @@
 
 #include "../calculus/singularities_residues.typ"
 
+#pagebreak()
+
+#include "../calculus/Furier_analysis.typ"
+
+
 
