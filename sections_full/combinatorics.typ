@@ -45,6 +45,9 @@
 
 #include "../combinatorics/graphs_base.typ"
 
+#pagebreak()
+
+#include "../combinatorics/square_residues.typ"
 
 
 
