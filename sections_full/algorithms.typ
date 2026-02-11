@@ -22,3 +22,9 @@
 #pagebreak()
 
 #include "../algorithms/dynamic_programming.typ"
+
+#pagebreak()
+
+#include "../algorithms/graph_algo_base.typ"
+
+
