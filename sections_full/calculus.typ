@@ -41,6 +41,11 @@
 
 #pagebreak()
 
+
+#include "../calculus/integrals_convergence.typ"
+
+#pagebreak()
+
 #include "../calculus/number_series.typ"
 
 #pagebreak()
