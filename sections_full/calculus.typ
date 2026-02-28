@@ -72,5 +72,9 @@
 
 #include "../calculus/Furier_analysis.typ"
 
+#pagebreak()
+
+#include "../calculus/metric_spaces.typ"
+
 
 
