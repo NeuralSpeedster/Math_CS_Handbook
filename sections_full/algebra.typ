@@ -42,6 +42,10 @@
 
 #pagebreak()
 
+#include "../algebra/groups-2.typ"
+
+#pagebreak()
+
 #include "../algebra/polynomials.typ"
 
 #pagebreak()
