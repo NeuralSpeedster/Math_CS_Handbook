@@ -21,9 +21,9 @@
 
 #pagebreak()
 
-//#include "../calculus/Lebesgue_measure.typ"
+#include "../calculus/Lebesgue_measure.typ"
 
-//#pagebreak()
+#pagebreak()
 
 #include "../calculus/multiple_integrals.typ"
 
