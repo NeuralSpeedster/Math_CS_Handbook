@@ -25,6 +25,10 @@
 
 #pagebreak()
 
+#include "../calculus/several_variable_calculus.typ"
+
+#pagebreak()
+
 #include "../calculus/multiple_integrals.typ"
 
 #pagebreak()
