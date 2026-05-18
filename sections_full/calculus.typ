@@ -80,5 +80,8 @@
 
 #include "../calculus/metric_spaces.typ"
 
+#pagebreak()
+
+#include "../calculus/banah_spaces.typ"
 
 

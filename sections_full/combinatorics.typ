@@ -49,5 +49,11 @@
 
 #include "../combinatorics/square_residues.typ"
 
+#pagebreak()
+
+#include "../combinatorics/prime_tests.typ"
+
+
+
 
 
