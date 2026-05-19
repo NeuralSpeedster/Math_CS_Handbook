@@ -52,6 +52,11 @@
 
 #include "../calculus/number_series.typ"
 
+
+#pagebreak()
+
+#include "../calculus/inequalities.typ"
+
 #pagebreak()
 
 #include "../calculus/complex_analysis_base.typ"
