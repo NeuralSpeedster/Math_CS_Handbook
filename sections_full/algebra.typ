@@ -50,7 +50,12 @@
 
 #pagebreak()
 
-#include "../algebra/polynomials_ divisibility.typ"
+#include "../algebra/divisibility_PID.typ"
+
+
+#pagebreak()
+
+#include "../algebra/modules.typ"
 
 #pagebreak()
 

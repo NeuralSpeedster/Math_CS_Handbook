@@ -27,9 +27,8 @@ numbering: eq_num
 #set enum(full: true, numbering: "1.1.", indent: 1.25em)
 #set list(indent: 1.25em)
 #align(horizon, align(center, stack(spacing: 1.5em, 
-text(size: 24pt, weight: "bold", "ШАД. Хэндбук поступающего"),
-text(size: 18pt, "Автор: Даниил Скороходов "),
-text(size: 18pt,"@neuralspeedster"), 
+text(size: 24pt, weight: "bold", "Хэндбук по математике"),
+text(size: 18pt,"Автор: @neuralspeedster"), 
 text(size: 14pt, datetime.today().display("[day].[month].[year]"))
 )))
 
@@ -60,7 +59,7 @@ text(size: 14pt, datetime.today().display("[day].[month].[year]"))
     pagebreak()
   }
   if s6 == 1 {
-    include "sections_full/DS.typ"
+    include "sections_full/topology.typ"
   }
 }
 
@@ -68,4 +67,4 @@ text(size: 14pt, datetime.today().display("[day].[month].[year]"))
 
 #pagebreak()
 
-#sections(1, 1, 1, 1, 1, 0)
+#sections(1, 1, 1, 1, 1, 1)
