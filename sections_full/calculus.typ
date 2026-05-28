@@ -27,9 +27,9 @@
 
 #include "../calculus/several_variable_calculus.typ"
 
-#pagebreak()
+//#pagebreak()
 
-#include "../calculus/multiple_integrals.typ"
+//#include "../calculus/multiple_integrals.typ"
 
 #pagebreak()
 
