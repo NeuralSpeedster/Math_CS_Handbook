@@ -55,11 +55,11 @@ text(size: 14pt, datetime.today().display("[day].[month].[year]"))
     pagebreak()
   }
   if s5 == 1 {
-    include "sections_full/algorithms.typ"
+    include "sections_full/topology.typ"
     pagebreak()
   }
   if s6 == 1 {
-    include "sections_full/topology.typ"
+    include "sections_full/algorithms.typ"
   }
 }
 

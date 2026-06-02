@@ -69,3 +69,9 @@
 
 #include "../algebra/euclidian_spaces.typ"
 
+#pagebreak()
+
+#include "../algebra/tensors.typ"
+
+
+

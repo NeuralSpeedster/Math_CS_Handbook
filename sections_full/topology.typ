@@ -1,14 +1,21 @@
 #set page(footer: context 
 [
   #line(length: 100%)
-  _Топология_
+  _Геометрия и топология_
 #h(1fr)
 #counter(page).display("1")
 ]
 )
 
-= Топология
+= Геометрия и топология
+
+
+#include "../topology/affine-spaces.typ"
+
+#pagebreak()
+
 
 #include "../topology/introduction.typ"
+
 
 
