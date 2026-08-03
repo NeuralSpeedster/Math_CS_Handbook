@@ -9,6 +9,15 @@
 = Алгебра
 
 
+#include "../algebra/groups.typ"
+
+#pagebreak()
+
+#include "../algebra/groups-2.typ"
+
+#pagebreak()
+
+
 #include "../algebra/permutations.typ"
 
 #pagebreak()
@@ -38,14 +47,6 @@
 
 #pagebreak()
 
-#include "../algebra/groups.typ"
-
-#pagebreak()
-
-#include "../algebra/groups-2.typ"
-
-#pagebreak()
-
 #include "../algebra/polynomials.typ"
 
 #pagebreak()
@@ -68,6 +69,10 @@
 #pagebreak()
 
 #include "../algebra/euclidian_spaces.typ"
+
+#pagebreak()
+
+#include "../algebra/hermitian_spaces.typ"
 
 #pagebreak()
 

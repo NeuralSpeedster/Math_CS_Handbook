@@ -141,7 +141,7 @@ $
   abs(int_X f overline(g) d mu) <= (int_X |f|^2 d mu)^(1/2) dot (int_X |g|^2 d mu)^(1/2).
 $
 ]
-__Доказательство.__ $square$ Это частный случай неравенства Гёльдера при $p = q = 2$, если оценить
+_Доказательство._ $square$ Это частный случай неравенства Гёльдера при $p = q = 2$, если оценить
 $
   abs(int_X f overline(g) d mu) <= int_X |f overline(g)| d mu = int_X abs(f g) d mu.
 $
