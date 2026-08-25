@@ -412,7 +412,7 @@ $
   k = l quad и quad (p_1^alpha_1, ..., p_n^alpha_n) = (q_1^beta_1, ..., q_n^beta_n)
 $
 
-Определим
+Определим кручение
 $
   op("Tor") M := {x in M | exists m in R: m dot x = 0}
 $

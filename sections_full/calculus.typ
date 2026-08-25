@@ -89,4 +89,13 @@
 
 #include "../calculus/banah_spaces.typ"
 
+#pagebreak()
 
+
+#include "../calculus/Hilbert_spaces.typ"
+
+
+#pagebreak()
+
+
+#include "../calculus/orthogonal_poly.typ"
