@@ -132,9 +132,9 @@ $
 Вероятность попадания в заданный интервал. Пусть $xi ~ N(mu, sigma)$. Найдём $pp(xi in [alpha, beta])$
 
 $
-  pp(xi in [alpha, beta]) = F_xi (beta) - F_xi (alpha) - Phi((beta - m)/sigma) - Phi((alpha - mu) / sigma)
+  pp(xi in [alpha, beta]) = F_xi (beta) - F_xi (alpha) - Phi((beta - mu)/sigma) - Phi((alpha - mu) / sigma)
   = \ =
-  Phi_0 ((beta - m)/sigma) - Phi_0 ((alpha - mu) / sigma)
+  Phi_0 ((beta - mu)/sigma) - Phi_0 ((alpha - mu) / sigma)
 $
 
 Для симметричного интервала получим:
@@ -145,16 +145,14 @@ $
 Правило 3-х сигм. Пусть $delta = 3 sigma$
 
 $
-  P(abs(sigma - mu) < 3 sigma) = 2 Phi_0 (3) approx 0.9974
+  P(abs(xi - mu) < 3 sigma) = 2 Phi_0 (3) approx 0.9974
 $
 
-=== Центрированная, нормированная случайная величина. Распределение линейной функции случайного аргумента
+_Определение._ Пусть случайная величина $xi$ имеет конечные матожидание $mu$ и дисперсию $sigma^2$. Тогда 
 
-_Определение._ Пусть случайная величина $xi$ имеет конечные матожидание $m$ и дисперсию $sigma^2$. Тогда 
++ случайная величина $xi_0 : = xi - mu$ называется центрированной. $EE[xi_0] = 0$.
 
-+ случайная величина $xi_0 : = xi - m$ называется центрированной. $EE[xi_0] = 0$.
-
-+ случайная величина $overline(xi) = (xi - m)/sigma$ называется нормированной. Имеет $EE[overline(xi)] = 0$ и $DD[overline(xi)] = 1$.
++ случайная величина $overline(xi) = (xi - mu)/sigma$ называется нормированной. Имеет $EE[overline(xi)] = 0$ и $DD[overline(xi)] = 1$.
 
 Стандартный нормальный закон $N(0, 1)$ --- нормальное распределение с $mu=0$ и $sigma=1$. 
 
@@ -174,5 +172,22 @@ $
   f_Y (y) = 1/(abs(a)) f_X ((y-b)/a).
 $
 
+\
+\
 
+=== Бета-распределение
+
+
+*Определение.* Бета-распределение задается функцией плотности
+
+$
+  f(x) = 1/(Beta(alpha, beta)) x^(alpha - 1) (1 - x)^(beta - 1), quad x in (0, 1)
+$
+
+где $alpha, beta > 0$ --- параметры распределения, $Beta$ --- бета-функция, $Beta(alpha, beta) = frac(Gamma(alpha) Gamma(beta), Gamma(alpha + beta))$. 
+
+Если $p ~ Beta(alpha, beta)$, то
+$
+  EE[p] = alpha/(alpha + beta), quad DD[p] = (alpha beta)/((alpha + beta)^2 (alpha + beta + 1))
+$
 
