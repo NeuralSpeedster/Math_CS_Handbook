@@ -17,5 +17,9 @@
 
 #include "../topology/introduction.typ"
 
+#pagebreak()
+
+#include "../topology/curvatures.typ"
+
 
 
